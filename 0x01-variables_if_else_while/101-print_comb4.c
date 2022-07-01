@@ -1,41 +1,40 @@
 #include <stdio.h>
+
 /**
- * main - print numbers from 00 to 99.
-(*
- * Return: 0 on success
+ * main - output all single digit number of base 10
+ *
+ * Return: 0 if successful
  */
 int main(void)
 {
-	int i = '0';
-	int j = '0';
-	int k = '0';
+	int var;
 
-while (i <= '7')
+	for (var = 0; var < 8; var++)
 	{
-		while (j <= '8')
-		{
-			while (k <= '9')
-			{
-				if (i < j && j < k)
-				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					if (!(i == '7' && j == '8' && k == '9'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+		int ii;
 
-}
-				k++;
+		for (ii = var + 1; ii < 9; ii++)
+		{
+			int jj;
+
+			for (jj = ii + 1; jj < 10; jj++)
+			{
+				putchar((var % 10) + '0');
+				putchar((ii % 10) + '0');
+				putchar((jj % 10) + '0');
+
+				if (var != 7)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+				else
+					continue;
 			}
-			k = '0';
-			j++;
 		}
-		j = '0';
-		i++;
 	}
+
 	putchar('\n');
+
 	return (0);
 }
