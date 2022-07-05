@@ -1,4 +1,3 @@
-lines (23 sloc)  328 Bytes
 #include <stdio.h>
 
 /**
