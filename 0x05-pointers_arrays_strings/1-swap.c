@@ -5,14 +5,12 @@
  * @var1: first variable
  * @var2: second variable
  *
- * Created by: Titus Ojediran 
+ * Created by: Titusr
  * cc: 12th july, 2022
  */
-
 void swap_int(int *var1, int *var2)
 {
 	int tmp = *var1;
 	*var1 = *var2;
 	*var2 = tmp;
 }
-
